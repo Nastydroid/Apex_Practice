@@ -7,7 +7,7 @@ public with sharing class CreateAccountAndContact {
         //persist the account inside the org database
         insert freshAcct;
         //this will be used to map contacts to accounts
-        acctid = freshAcct.Id;
+        acctid = freshAcct.ID;
         System.debug('Account created successfully');
         }catch(DmlException e){
             System.debug('There was an error' + e.getMessage());
@@ -28,6 +28,6 @@ public with sharing class CreateAccountAndContact {
         }
     }
 
-    //CreateAccountAndContact.account('SFDC Space Man','(234)123-2331',50,'Lagos'); test code for execution
-    //CreateAccountAndContact.contact('oluwafemi','Thompson','(234)32-1212','Wingo');
+   // CreateAccountAndContact.account('SFDC Space Energy','(234)123-23332',200,'Ikeja'); //test code for execution
+    //CreateAccountAndContact.contact('James','Thompson','(234)32-1212','Energy');
 }
