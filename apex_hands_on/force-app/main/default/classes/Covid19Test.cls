@@ -23,11 +23,14 @@
 private class Covid19Test {
 
     @isTest
-    public static void treatPatient() {
+    static void treatPatient() {
         // TO DO: implement unit test
         Covid19 usa = new Covid19(30);
 
+        Test.startTest();
+
         Integer treated = usa.getTreated();
-        System.assertEquals(10,treated, ' Treated count does not match');
+        Test.stopTest();
+        Assert.areEqual(10,treated, ' Treated count does not match');
     }
 }
