@@ -1,9 +1,9 @@
 public with sharing class AnimalsCallouts {
-    public static HttpResponse makeGetCallout(){
+    public static HttpResponse makeGetCallout(Integer D){
         Http http = new Http();
 
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');
+        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals'+ D);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         //if the request is successful, parse the JSON response.
